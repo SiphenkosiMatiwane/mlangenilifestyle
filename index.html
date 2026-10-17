@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17120f">
+  <meta name="description" content="Mlangeni Lifestyle - kota, burgers, ribs and more in Hlalanikahle Ext 3, Witbank. Order on WhatsApp.">
+  <title>Mlangeni Lifestyle | Fast Food & Good Vibes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Mlangeni Lifestyle home">
+      <span class="brand-mark">ML</span>
+      <span><strong>Mlangeni</strong><small>LIFESTYLE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">About Us</a><a href="#contact">Find Us</a>
+      <a class="nav-order" href="#" data-whatsapp>Order on WhatsApp ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><span class="pulse"></span> GOOD FOOD. GOOD MOOD.</span>
+        <h1>Big flavour.<br><span>Real lifestyle.</span></h1>
+        <p>Your kota cravings, juicy burgers, saucy ribs and favourite fast-food classics — all in one place.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Explore the menu <span>↓</span></a>
+          <a class="btn btn-outline" href="#" data-whatsapp>Order on WhatsApp <span>↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">📍</span><span><strong>Come through!</strong><br>Hlalanikahle Ext 3, Witbank</span></div>
+      </div>
+      <div class="hero-food" aria-label="Illustration of fast food">
+        <div class="food-orbit orbit-one"></div><div class="food-orbit orbit-two"></div>
+        <div class="food-sticker sticker-top">FRESH<br><b>& TASTY</b></div>
+        <div class="food-emoji">🍔</div>
+        <div class="food-side food-kota">🥪</div><div class="food-side food-fries">🍟</div>
+        <div class="food-sticker sticker-bottom">MADE WITH<br><b>FLAVOUR ♥</b></div>
+      </div>
+      <div class="hero-bottom"><span>MADE FOR YOUR CRAVINGS</span><span>WITBANK · SOUTH AFRICA</span></div>
+    </section>
+
+    <section class="quick-strip" aria-label="Highlights">
+      <div>🍔 <span>BURGERS</span></div><i></i><div>🥪 <span>KOTA</span></div><i></i><div>🍖 <span>RIBS</span></div><i></i><div>🍟 <span>FAST FOOD FAVOURITES</span></div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE GOOD STUFF</span><h2>Find your <span>favourite.</span></h2></div>
+        <p>Something for every craving. Choose your meal and send your order straight to us on WhatsApp.</p>
+      </div>
+      <div class="menu-filters" role="group" aria-label="Filter menu">
+        <button class="filter active" data-filter="all">All favourites</button>
+        <button class="filter" data-filter="kota">Kotas</button>
+        <button class="filter" data-filter="burger">Burgers</button>
+        <button class="filter" data-filter="ribs">Ribs</button>
+        <button class="filter" data-filter="sides">Sides & more</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <article class="menu-card" data-category="kota"><div class="menu-art art-orange">🥪<span class="art-label">LOCAL LEGEND</span></div><div class="menu-info"><div class="menu-title"><h3>Classic Kota</h3><span class="price">Ask us</span></div><p>A proper kota packed with flavour and your favourite fillings.</p><button class="order-item" data-item="Classic Kota">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="kota"><div class="menu-art art-red">🥪<span class="art-label">BIG CRAVINGS</span></div><div class="menu-info"><div class="menu-title"><h3>Loaded Kota</h3><span class="price">Ask us</span></div><p>Loaded with extra goodness for a seriously satisfying bite.</p><button class="order-item" data-item="Loaded Kota">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="burger"><div class="menu-art art-green">🍔<span class="art-label">JUICY & FRESH</span></div><div class="menu-info"><div class="menu-title"><h3>Classic Burger</h3><span class="price">Ask us</span></div><p>A tasty burger stacked with classic favourites.</p><button class="order-item" data-item="Classic Burger">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="burger"><div class="menu-art art-purple">🍔<span class="art-label">EXTRA FLAVOUR</span></div><div class="menu-info"><div class="menu-title"><h3>Loaded Burger</h3><span class="price">Ask us</span></div><p>A bigger bite for those days when only more will do.</p><button class="order-item" data-item="Loaded Burger">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="ribs"><div class="menu-art art-brown">🍖<span class="art-label">SAUCY GOODNESS</span></div><div class="menu-info"><div class="menu-title"><h3>Flavourful Ribs</h3><span class="price">Ask us</span></div><p>Tender, saucy ribs made for a proper treat.</p><button class="order-item" data-item="Flavourful Ribs">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="sides"><div class="menu-art art-yellow">🍟<span class="art-label">THE PERFECT SIDE</span></div><div class="menu-info"><div class="menu-title"><h3>Chips & Sides</h3><span class="price">Ask us</span></div><p>Add golden chips or ask us what other sides are available.</p><button class="order-item" data-item="Chips and Sides">Order this <span>↗</span></button></div></article>
+        <article class="menu-card" data-category="sides"><div class="menu-art art-blue">🌭<span class="art-label">QUICK & TASTY</span></div><div class="menu-info"><div class="menu-title"><h3>More Fast Food</h3><span class="price">Ask us</span></div><p>Looking for something else? Message us to check today's options.</p><button class="order-item" data-item="Other fast food options">Ask what's available <span>↗</span></button></div></article>
+        <article class="menu-card special-card"><div class="special-content"><span class="eyebrow">YOUR CRAVING, YOUR WAY</span><h3>Got a special request?</h3><p>Ask about available fillings, portions, prices and today's options.</p><a class="btn btn-light" href="#" data-whatsapp>Chat to us ↗</a></div><div class="special-emoji">🔥</div></article>
+      </div>
+      <p class="menu-disclaimer">Menu items and prices may vary. Message us on WhatsApp to confirm availability and current prices.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-visual"><div class="about-circle">🔥</div><div class="about-card"><span>GOOD FOOD</span><b>GOOD VIBES.</b><small>That's the Mlangeni way.</small></div></div>
+      <div class="about-copy"><span class="eyebrow">MORE THAN A MEAL</span><h2>Pull up hungry.<br><span>Leave happy.</span></h2><p>Mlangeni Lifestyle is your local stop for satisfying fast food in Hlalanikahle Ext 3, Witbank. Whether you're in the mood for a kota, a burger, ribs or a quick bite, we're here for the cravings.</p><div class="about-points"><div><span>01</span><p><b>Local flavour</b><br>Food for your everyday cravings.</p></div><div><span>02</span><p><b>Easy ordering</b><br>Message us on WhatsApp to order.</p></div></div><a class="text-link" href="#contact">Find our location <span>→</span></a></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-copy"><span class="eyebrow">COME FIND US</span><h2>Your next bite<br>is <span>nearby.</span></h2><p>Visit Mlangeni Lifestyle in the Hlalanikahle community. For orders, prices or questions, send us a WhatsApp message.</p><a href="#" class="btn btn-primary" data-whatsapp>Message us on WhatsApp ↗</a></div>
+      <div class="location-card"><div class="map-top"><span class="map-pin">📍</span><span class="map-tag">FIND US HERE</span></div><div class="map-pattern"><span class="map-road road-a"></span><span class="map-road road-b"></span><span class="map-road road-c"></span><div class="map-marker">ML</div><div class="map-place">Mlangeni Lifestyle</div></div><div class="location-details"><span class="location-icon">📍</span><div><b>Our address</b><p>Witbank, Hlalanikahle Ext 3<br>Next to Taxi Rank and Community Hall</p></div><a class="directions" href="https://www.google.com/maps/search/?api=1&query=Hlalanikahle+Ext+3+Witbank+Taxi+Rank+Community+Hall" target="_blank" rel="noopener">Directions ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">ML</span><span><strong>Mlangeni</strong><small>LIFESTYLE</small></span></a><p>Good food. Good mood. Every time.</p><span class="copyright">© <span id="year"></span> Mlangeni Lifestyle</span></footer>
+
+  <button class="chat-launcher" id="chatLauncher" aria-label="Open automated chat"><span class="chat-launch-icon">✦</span><span>Chat now</span><span class="chat-dot"></span></button>
+  <section class="chat-window" id="chatWindow" aria-label="Mlangeni automated chat" hidden>
+    <div class="chat-header"><div class="chat-avatar">ML</div><div><b>Mlangeni Assistant</b><small><span class="online-dot"></span> Automated chat · Online</small></div><button id="chatClose" aria-label="Close chat">×</button></div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite"><div class="message bot-message">Hey there! 👋 Welcome to Mlangeni Lifestyle. What can I help you with?</div><div class="quick-questions"><button data-question="menu">🍔 View menu</button><button data-question="prices">💰 Prices</button><button data-question="location">📍 Location</button><button data-question="order">🛵 How to order</button><button data-question="hours">🕒 Opening hours</button></div></div>
+    <form class="chat-input-row" id="chatForm"><input id="chatInput" type="text" placeholder="Ask us something..." autocomplete="off" aria-label="Type your question"><button type="submit" aria-label="Send message">➤</button></form>
+    <div class="chat-foot">Automated answers · For more help, message us on WhatsApp</div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
