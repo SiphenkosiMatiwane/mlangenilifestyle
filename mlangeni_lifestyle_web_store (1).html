@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mlangeni Lifestyle - Kasi Fast Food & Grill</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF5722',
+                            amber: '#FFC107',
+                            dark: '#121212',
+                            card: '#1E1E1E',
+                            accent: '#2A2A2A',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF5722;
+        }
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-orange selection:text-white pb-20 md:pb-0">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-brand-orange to-amber-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md">
+        <i class="fa-solid font-bold fa-fire-flame-curved mr-2"></i> Hot & Fresh Kotas, Ribs & Burgers! Order directly via WhatsApp! 🚀
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 glass border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo / Name -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-orange to-amber-500 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-brand-orange/30">
+                    M
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        MLANGENI <span class="text-brand-orange">LIFESTYLE</span>
+                    </h1>
+                    <p class="text-xs text-gray-400 flex items-center gap-1">
+                        <i class="fa-solid fa-location-dot text-brand-orange"></i> Witbank, Hlalanikahle Ext 3
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="flex items-center gap-3">
+                <a href="#location" class="hidden md:flex items-center gap-2 text-xs text-gray-300 bg-brand-accent hover:bg-gray-700 px-3 py-2 rounded-lg transition">
+                    <i class="fa-regular fa-clock text-brand-amber"></i> Open Daily: 09:00 - 21:00
+                </a>
+                <!-- Cart Button -->
+                <button onclick="toggleCart()" class="relative bg-brand-orange hover:bg-orange-600 text-white p-3 rounded-xl shadow-lg shadow-brand-orange/20 transition flex items-center gap-2 font-semibold text-sm">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="hidden sm:inline">My Basket</span>
+                    <span id="cart-badge" class="absolute -top-2 -right-2 bg-brand-amber text-black text-xs font-black w-6 h-6 rounded-full flex items-center justify-center border-2 border-brand-dark transition-all scale-0">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-brand-dark py-12 md:py-20 overflow-hidden border-b border-gray-800">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#FF5722_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/30 px-3 py-1.5 rounded-full text-brand-orange text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-utensils"></i> Authentic Kasi Flavours
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+                    Taste The Ultimate <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-400 to-amber-500">Mlangeni Vibe</span>
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base max-w-lg mx-auto md:mx-0">
+                    Serving the best loaded Kotas, succulent Ribs, flame-grilled Burgers, and crispy Wings right next to the Taxi Rank in Hlalanikahle Ext 3!
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#menu" class="bg-brand-orange hover:bg-orange-600 text-white px-6 py-3.5 rounded-xl font-bold transition shadow-lg shadow-brand-orange/20 flex items-center gap-2">
+                        <i class="fa-solid fa-burger"></i> View Menu
+                    </a>
+                    <a href="#location" class="bg-brand-accent hover:bg-gray-700 text-white px-6 py-3.5 rounded-xl font-bold transition flex items-center gap-2 border border-gray-700">
+                        <i class="fa-solid fa-map-pin text-brand-orange"></i> Find Us
+                    </a>
+                </div>
+            </div>
+            <!-- Featured Banner Image -->
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-md h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border border-gray-800 relative group">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Mlangeni Special Burger & Chips" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                        <span class="bg-brand-amber text-black text-xs font-black px-2.5 py-1 rounded w-max mb-1">CHEF'S FAVOURITE</span>
+                        <h3 class="text-xl font-bold text-white">Mlangeni Monster Burger</h3>
+                        <p class="text-xs text-gray-300">Double patty, extra cheese, loaded chips & secret sauce.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & QUICK INFO BAR -->
+    <section id="location" class="bg-brand-card py-6 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-4 p-2">
+                <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Our Location</h4>
+                    <p class="text-xs text-gray-400">Witbank, Hlalanikahle Ext 3<br><span class="text-brand-amber font-medium">(Next to Taxi Rank & Community Hall)</span></p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center sm:justify-start gap-4 p-2 border-t sm:border-t-0 sm:border-l border-gray-800">
+                <div class="w-12 h-12 rounded-xl bg-brand-amber/10 border border-brand-amber/30 flex items-center justify-center text-brand-amber text-xl shrink-0">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Operating Hours</h4>
+                    <p class="text-xs text-gray-400">Monday - Sunday: 09:00 - 21:00<br><span class="text-green-400 font-medium">Open Now for Orders</span></p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center sm:justify-start gap-4 p-2 border-t sm:border-t-0 sm:border-l border-gray-800">
+                <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-400 text-xl shrink-0">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Direct WhatsApp Hotline</h4>
+                    <p class="text-xs text-gray-400">Fast delivery & pickup response<br><span class="text-gray-300 font-medium">+27 72 000 0000</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <main id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">EXPLORE OUR MENU</h2>
+                <p class="text-sm text-gray-400 mt-1">Select your favorite meal and place your order via WhatsApp in seconds.</p>
+            </div>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-filters">
+                <button onclick="filterCategory('all')" class="cat-btn active border px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition bg-brand-orange border-brand-orange text-white">
+                    🔥 All Items
+                </button>
+                <button onclick="filterCategory('kotas')" class="cat-btn border border-gray-700 bg-brand-card hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition">
+                    🍞 Kotas
+                </button>
+                <button onclick="filterCategory('burgers')" class="cat-btn border border-gray-700 bg-brand-card hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition">
+                    🍔 Burgers
+                </button>
+                <button onclick="filterCategory('ribs')" class="cat-btn border border-gray-700 bg-brand-card hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition">
+                    🍖 Ribs & Wings
+                </button>
+                <button onclick="filterCategory('extras')" class="cat-btn border border-gray-700 bg-brand-card hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition">
+                    🍟 Extras & Drinks
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Grid -->
+        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamically Rendered Menu Items Here -->
+        </div>
+    </main>
+
+    <!-- ADMIN PANEL SECTION -->
+    <section id="admin-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 my-8 border-t border-gray-800 bg-brand-card rounded-2xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+            <div>
+                <h3 class="text-xl font-extrabold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-user-shield text-brand-orange"></i> Admin Panel
+                </h3>
+                <p class="text-xs text-gray-400">Owner portal to manage food menu items and store details.</p>
+            </div>
+            <div id="admin-status-area">
+                <button id="admin-login-btn" onclick="openAdminLoginModal()" class="bg-brand-accent hover:bg-gray-700 text-white px-4 py-2 rounded-xl text-xs font-bold border border-gray-700 flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-brand-amber"></i> Admin Login
+                </button>
+                <button id="admin-logout-btn" onclick="logoutAdmin()" class="hidden bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white px-4 py-2 rounded-xl text-xs font-bold border border-red-500/30 flex items-center gap-2">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout Admin
+                </button>
+            </div>
+        </div>
+
+        <!-- Admin Content Area (Locked by default) -->
+        <div id="admin-content" class="hidden space-y-8">
+            <!-- Store Information Manager -->
+            <div class="bg-brand-dark p-6 rounded-xl border border-gray-800 space-y-4">
+                <h4 class="text-sm font-bold text-brand-amber uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-sliders"></i> Edit Store Details
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">WhatsApp Phone Number</label>
+                        <input type="text" id="admin-phone" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="e.g. 27720000000">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Address / Location</label>
+                        <input type="text" id="admin-address" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="Store Address">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Operating Hours</label>
+                        <input type="text" id="admin-hours" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="Opening Hours">
+                    </div>
+                </div>
+                <button onclick="saveStoreDetails()" class="bg-brand-orange hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-floppy-disk"></i> Save Store Info
+                </button>
+            </div>
+
+            <!-- Add / Edit Menu Item Form -->
+            <div class="bg-brand-dark p-6 rounded-xl border border-gray-800 space-y-4">
+                <h4 id="menu-form-title" class="text-sm font-bold text-brand-amber uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Add New Menu Item
+                </h4>
+                <input type="hidden" id="admin-item-id">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Item Name</label>
+                        <input type="text" id="admin-item-name" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="e.g. Mega Cheese Kota">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Category</label>
+                        <select id="admin-item-category" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange">
+                            <option value="kotas">Kotas</option>
+                            <option value="burgers">Burgers</option>
+                            <option value="ribs">Ribs & Wings</option>
+                            <option value="extras">Extras & Drinks</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Price (ZAR)</label>
+                        <input type="number" id="admin-item-price" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="e.g. 65">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Badge / Tag</label>
+                        <input type="text" id="admin-item-tag" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="e.g. Bestseller, Spicy, New">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Image URL</label>
+                        <input type="text" id="admin-item-image" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="https://images.unsplash.com/...">
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label class="block text-xs text-gray-400 font-bold mb-1">Description</label>
+                        <input type="text" id="admin-item-desc" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="Short description of ingredients and taste">
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-2">
+                    <button onclick="saveMenuItem()" class="bg-brand-orange hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg text-xs font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-check"></i> Save Item
+                    </button>
+                    <button id="cancel-edit-btn" onclick="resetMenuForm()" class="hidden bg-gray-700 hover:bg-gray-600 text-gray-300 px-4 py-2.5 rounded-lg text-xs font-bold">
+                        Cancel Edit
+                    </button>
+                </div>
+            </div>
+
+            <!-- Existing Items Management Table -->
+            <div class="bg-brand-dark p-6 rounded-xl border border-gray-800 space-y-4">
+                <h4 class="text-sm font-bold text-brand-amber uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-list-check"></i> Manage Existing Menu Items
+                </h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-gray-300">
+                        <thead class="bg-brand-card text-gray-400 font-bold uppercase border-b border-gray-800">
+                            <tr>
+                                <th class="p-3">Item</th>
+                                <th class="p-3">Category</th>
+                                <th class="p-3">Price</th>
+                                <th class="p-3 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-menu-table-body" class="divide-y divide-gray-800">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Locked Prompt Message -->
+        <div id="admin-locked-msg" class="text-center py-8 text-gray-500">
+            <i class="fa-solid fa-lock text-3xl mb-2 text-gray-600"></i>
+            <p class="text-xs">The Admin Panel is protected. Click "Admin Login" above to enter password and manage store settings.</p>
+        </div>
+    </section>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="admin-login-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 hidden">
+        <div class="bg-brand-card border border-gray-800 rounded-2xl w-full max-w-sm p-6 space-y-4 shadow-2xl relative">
+            <button onclick="closeAdminLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center space-y-1">
+                <div class="w-12 h-12 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center mx-auto text-xl mb-2">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3 class="text-base font-extrabold text-white">Owner Access</h3>
+                <p class="text-xs text-gray-400">Enter admin password to unlock management tools.</p>
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 font-bold mb-1">Password</label>
+                <input type="password" id="admin-password-input" class="w-full bg-brand-dark border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange" placeholder="Enter password..." onkeypress="handleAdminPassKeyPress(event)">
+                <p id="admin-login-error" class="text-[11px] text-red-500 font-bold mt-1.5 hidden">Incorrect password. Please try again.</p>
+            </div>
+            <button onclick="submitAdminLogin()" class="w-full bg-brand-orange hover:bg-orange-600 text-white py-2.5 rounded-xl text-xs font-bold transition">
+                Unlock Admin Panel
+            </button>
+        </div>
+    </div>
+
+    <!-- SHOPPING CART SLIDE-OVER MODAL -->
+    <div id="cart-modal" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 bg-black/75 transition-opacity" onclick="toggleCart()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-brand-card text-white shadow-2xl flex flex-col justify-between border-l border-gray-800">
+                <!-- Cart Header -->
+                <div class="p-6 border-b border-gray-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-bag-shopping text-brand-orange text-xl"></i>
+                        <h3 class="text-lg font-extrabold tracking-wide">YOUR BASKET</h3>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white p-2 rounded-lg bg-brand-accent">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Cart Items Container -->
+                <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <!-- Dynamic Cart Items -->
+                </div>
+
+                <!-- Cart Summary & Order Form -->
+                <div class="p-6 border-t border-gray-800 bg-brand-dark space-y-4">
+                    <!-- Delivery/Takeaway selection -->
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 mb-2 uppercase">Order Type</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-gray-700 bg-brand-card cursor-pointer hover:border-brand-orange transition">
+                                <input type="radio" name="orderType" value="Takeaway / Pickup" checked class="accent-brand-orange" onchange="toggleDeliveryAddress()">
+                                <span class="text-xs font-bold">🛍️ Pickup</span>
+                            </label>
+                            <label class="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-gray-700 bg-brand-card cursor-pointer hover:border-brand-orange transition">
+                                <input type="radio" name="orderType" value="Delivery" class="accent-brand-orange" onchange="toggleDeliveryAddress()">
+                                <span class="text-xs font-bold">🚚 Delivery</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Address Input (Hidden by default) -->
+                    <div id="delivery-address-field" class="hidden">
+                        <label class="block text-xs font-bold text-gray-400 mb-1">Delivery Address / Section</label>
+                        <input type="text" id="cust-address" placeholder="e.g. Hlalanikahle Ext 3, Stand No. 123" class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange">
+                    </div>
+
+                    <!-- Customer Notes -->
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 mb-1">Special Instructions / Notes</label>
+                        <input type="text" id="cust-notes" placeholder="e.g. Extra sauce, no onions..." class="w-full bg-brand-card border border-gray-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-orange">
+                    </div>
+
+                    <!-- Total Price -->
+                    <div class="flex items-center justify-between pt-2 border-t border-gray-800">
+                        <span class="text-gray-400 font-bold text-sm">TOTAL AMOUNT:</span>
+                        <span id="cart-total-price" class="text-2xl font-black text-brand-orange">R 0.00</span>
+                    </div>
+
+                    <!-- Submit WhatsApp Order Button -->
+                    <button onclick="sendWhatsAppOrder()" class="w-full bg-brand-whatsapp hover:bg-emerald-600 text-white py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Order via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTOMATED CHAT BOT WIDGET -->
+    <div class="fixed bottom-4 right-4 z-40">
+        <!-- Chat Toggle Button -->
+        <button onclick="toggleChat()" class="relative bg-gradient-to-r from-brand-orange to-amber-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-105 transition duration-300">
+            <i id="chat-icon-open" class="fa-solid fa-comments text-2xl"></i>
+            <i id="chat-icon-close" class="fa-solid fa-xmark text-2xl hidden"></i>
+            <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-brand-dark rounded-full"></span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-brand-card border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 h-[480px]">
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-brand-orange to-amber-600 p-4 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-lg">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Mlangeni Assistant</h4>
+                    <p class="text-[10px] text-white/80 flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Online • Auto-Responder
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chat Messages Log -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <!-- Initial Bot Greeting -->
+                <div class="flex gap-2 items-start">
+                    <div class="w-7 h-7 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center text-xs shrink-0 mt-1">
+                        🤖
+                    </div>
+                    <div class="bg-brand-accent p-3 rounded-2xl rounded-tl-none max-w-[80%] text-gray-200">
+                        Hello! 👋 Welcome to Mlangeni Lifestyle in Hlalanikahle Ext 3! How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Questions Carousel -->
+            <div class="p-2 border-t border-gray-800 bg-brand-dark flex gap-1.5 overflow-x-auto scrollbar-none">
+                <button onclick="askQuickQuestion('location')" class="bg-brand-card hover:bg-gray-700 text-gray-300 text-[11px] px-2.5 py-1.5 rounded-lg border border-gray-700 whitespace-nowrap">
+                    📍 Location?
+                </button>
+                <button onclick="askQuickQuestion('hours')" class="bg-brand-card hover:bg-gray-700 text-gray-300 text-[11px] px-2.5 py-1.5 rounded-lg border border-gray-700 whitespace-nowrap">
+                    🕒 Hours?
+                </button>
+                <button onclick="askQuickQuestion('kotas')" class="bg-brand-card hover:bg-gray-700 text-gray-300 text-[11px] px-2.5 py-1.5 rounded-lg border border-gray-700 whitespace-nowrap">
+                    🍞 Top Kotas?
+                </button>
+                <button onclick="askQuickQuestion('delivery')" class="bg-brand-card hover:bg-gray-700 text-gray-300 text-[11px] px-2.5 py-1.5 rounded-lg border border-gray-700 whitespace-nowrap">
+                    🚚 Delivery info?
+                </button>
+            </div>
+
+            <!-- Chat Input Bar -->
+            <div class="p-3 border-t border-gray-800 bg-brand-dark flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type your question..." class="flex-1 bg-brand-card border border-gray-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-orange" onkeypress="handleChatKeyPress(event)">
+                <button onclick="sendChatMessage()" class="bg-brand-orange hover:bg-orange-600 text-white px-3.5 py-2 rounded-xl text-xs font-bold">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-gray-900 py-8 mt-12 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p class="font-bold text-gray-400">MLANGENI LIFESTYLE FAST FOOD</p>
+            <p>Witbank, Hlalanikahle Ext 3 (Next to Taxi Rank & Community Hall)</p>
+            <p>&copy; 2026 Mlangeni Lifestyle. All Rights Reserved. Prepared fresh daily!</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /* ==========================================================================
+           MENU DATA & STORE CONFIG
+           ========================================================================== */
+        const initialMenuItems = [
+            {
+                id: 'k1',
+                name: 'Classic Kasi Kota',
+                category: 'kotas',
+                price: 35,
+                tag: 'Bestseller',
+                desc: 'Crispy quarter loaf filled with hot chips, polony, cheese, and special sauces.',
+                image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'k2',
+                name: 'Deluxe Club Kota',
+                category: 'kotas',
+                price: 55,
+                tag: 'Popular',
+                desc: 'Quarter loaf with chips, Russian sausage, egg, double cheese, polony & burger patty.',
+                image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'k3',
+                name: 'Mlangeni Special Kota',
+                category: 'kotas',
+                price: 75,
+                tag: 'Chef Special',
+                desc: 'Loaded quarter loaf with chips, steak strips, Russian, egg, bacon, double cheese & house sauce.',
+                image: 'https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'b1',
+                name: 'BBQ Cheese Burger',
+                category: 'burgers',
+                price: 50,
+                tag: 'Classic',
+                desc: '150g pure beef patty, cheddar cheese, caramelized onions & signature BBQ glaze.',
+                image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'b2',
+                name: 'Double Stacked Beef Burger',
+                category: 'burgers',
+                price: 80,
+                tag: 'Heavy Meal',
+                desc: 'Two 150g beef patties, double melted cheese, bacon, lettuce & secret mayo.',
+                image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'b3',
+                name: 'Spicy Chicken Burger',
+                category: 'burgers',
+                price: 55,
+                tag: 'Hot & Spicy',
+                desc: 'Crispy fried spicy chicken fillet, tangy mayo, jalapenos & fresh lettuce.',
+                image: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'r1',
+                name: 'Sticky BBQ Pork/Beef Ribs (400g)',
+                category: 'ribs',
+                price: 110,
+                tag: 'Flame Grilled',
+                desc: '400g tender succulent ribs basted in sweet smokey BBQ glaze with chips.',
+                image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'r2',
+                name: 'Sticky BBQ Ribs Mega Pack (800g)',
+                category: 'ribs',
+                price: 195,
+                tag: 'Sharing Size',
+                desc: '800g flame-grilled juicy ribs served with a large portion of seasoned chips.',
+                image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'r3',
+                name: 'Rib & Wing Combo',
+                category: 'ribs',
+                price: 135,
+                tag: 'Top Combo',
+                desc: '400g BBQ ribs paired with 4 crispy spicy chicken wings and seasoned chips.',
+                image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'e1',
+                name: 'Mlangeni Loaded Fries',
+                category: 'extras',
+                price: 40,
+                tag: 'Side Dish',
+                desc: 'Large crispy hot chips topped with melted cheese sauce, bacon bits & chili.',
+                image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'e2',
+                name: '6 Pcs Spicy Wings',
+                category: 'extras',
+                price: 50,
+                tag: 'Crispy',
+                desc: 'Golden fried chicken wings tossed in fiery peri-peri or sweet BBQ sauce.',
+                image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 'e3',
+                name: 'Cold Drinks (440ml)',
+                category: 'extras',
+                price: 18,
+                tag: 'Refreshment',
+                desc: 'Choose from Coca-Cola, Fanta, Sprite, or Stoney.',
+                image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80'
+            }
+        ];
+
+        let menuItems = JSON.parse(localStorage.getItem('mlangeni_menu')) || initialMenuItems;
+        let storeConfig = JSON.parse(localStorage.getItem('mlangeni_config')) || {
+            phone: '27720000000',
+            address: 'Witbank, Hlalanikahle Ext 3 (Next to Taxi Rank & Community Hall)',
+            hours: 'Monday - Sunday: 09:00 - 21:00'
+        };
+
+        function saveMenuToStorage() {
+            localStorage.setItem('mlangeni_menu', JSON.stringify(menuItems));
+            renderMenu(menuItems);
+            if (isAdminLoggedIn) renderAdminTable();
+        }
+
+        function saveConfigToStorage() {
+            localStorage.setItem('mlangeni_config', JSON.stringify(storeConfig));
+        }
+
+        /* ==========================================================================
+           ADMIN PANEL LOGIC & PASSWORD AUTH
+           ========================================================================== */
+        let isAdminLoggedIn = false;
+
+        function openAdminLoginModal() {
+            document.getElementById('admin-login-modal').classList.remove('hidden');
+            document.getElementById('admin-password-input').focus();
+            document.getElementById('admin-login-error').classList.add('hidden');
+        }
+
+        function closeAdminLoginModal() {
+            document.getElementById('admin-login-modal').classList.add('hidden');
+            document.getElementById('admin-password-input').value = '';
+        }
+
+        function handleAdminPassKeyPress(e) {
+            if (e.key === 'Enter') {
+                submitAdminLogin();
+            }
+        }
+
+        function submitAdminLogin() {
+            const passInput = document.getElementById('admin-password-input');
+            const errorEl = document.getElementById('admin-login-error');
+            const password = passInput.value.trim();
+
+            if (password === 'Mlangeni@ext3') {
+                isAdminLoggedIn = true;
+                closeAdminLoginModal();
+                document.getElementById('admin-content').classList.remove('hidden');
+                document.getElementById('admin-locked-msg').classList.add('hidden');
+                document.getElementById('admin-login-btn').classList.add('hidden');
+                document.getElementById('admin-logout-btn').classList.remove('hidden');
+
+                // Fill store details inputs
+                document.getElementById('admin-phone').value = storeConfig.phone;
+                document.getElementById('admin-address').value = storeConfig.address;
+                document.getElementById('admin-hours').value = storeConfig.hours;
+
+                renderAdminTable();
+                showNotification('Admin Panel Unlocked!');
+            } else {
+                errorEl.classList.remove('hidden');
+                passInput.value = '';
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('admin-content').classList.add('hidden');
+            document.getElementById('admin-locked-msg').classList.remove('hidden');
+            document.getElementById('admin-login-btn').classList.remove('hidden');
+            document.getElementById('admin-logout-btn').classList.add('hidden');
+            showNotification('Logged out from Admin Panel');
+        }
+
+        function saveStoreDetails() {
+            if (!isAdminLoggedIn) return;
+            storeConfig.phone = document.getElementById('admin-phone').value.trim() || storeConfig.phone;
+            storeConfig.address = document.getElementById('admin-address').value.trim() || storeConfig.address;
+            storeConfig.hours = document.getElementById('admin-hours').value.trim() || storeConfig.hours;
+
+            saveConfigToStorage();
+            showNotification('Store details updated successfully!');
+        }
+
+        function renderAdminTable() {
+            const tbody = document.getElementById('admin-menu-table-body');
+            tbody.innerHTML = menuItems.map(item => `
+                <tr class="hover:bg-brand-card">
+                    <td class="p-3 font-bold text-white flex items-center gap-2">
+                        <img src="${item.image}" class="w-8 h-8 rounded object-cover">
+                        ${item.name}
+                    </td>
+                    <td class="p-3 uppercase text-brand-orange font-bold">${item.category}</td>
+                    <td class="p-3 font-bold text-brand-amber">R ${item.price}</td>
+                    <td class="p-3 text-right space-x-2">
+                        <button onclick="editMenuItem('${item.id}')" class="bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white px-2.5 py-1 rounded text-[11px] font-bold">Edit</button>
+                        <button onclick="deleteMenuItem('${item.id}')" class="bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white px-2.5 py-1 rounded text-[11px] font-bold">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function saveMenuItem() {
+            if (!isAdminLoggedIn) return;
+
+            const id = document.getElementById('admin-item-id').value;
+            const name = document.getElementById('admin-item-name').value.trim();
+            const category = document.getElementById('admin-item-category').value;
+            const price = parseFloat(document.getElementById('admin-item-price').value);
+            const tag = document.getElementById('admin-item-tag').value.trim() || 'Popular';
+            const image = document.getElementById('admin-item-image').value.trim() || 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80';
+            const desc = document.getElementById('admin-item-desc').value.trim();
+
+            if (!name || isNaN(price)) {
+                alert('Please enter a valid item name and price.');
+                return;
+            }
+
+            if (id) {
+                // Edit existing
+                const index = menuItems.findIndex(i => i.id === id);
+                if (index !== -1) {
+                    menuItems[index] = { id, name, category, price, tag, desc, image };
+                    showNotification('Menu item updated!');
+                }
+            } else {
+                // Add new
+                const newId = 'm_' + Date.now();
+                menuItems.push({ id: newId, name, category, price, tag, desc, image });
+                showNotification('New menu item added!');
+            }
+
+            resetMenuForm();
+            saveMenuToStorage();
+        }
+
+        function editMenuItem(id) {
+            const item = menuItems.find(i => i.id === id);
+            if (!item) return;
+
+            document.getElementById('admin-item-id').value = item.id;
+            document.getElementById('admin-item-name').value = item.name;
+            document.getElementById('admin-item-category').value = item.category;
+            document.getElementById('admin-item-price').value = item.price;
+            document.getElementById('admin-item-tag').value = item.tag;
+            document.getElementById('admin-item-image').value = item.image;
+            document.getElementById('admin-item-desc').value = item.desc;
+
+            document.getElementById('menu-form-title').innerHTML = '<i class="fa-solid fa-pen-to-square"></i> Edit Menu Item';
+            document.getElementById('cancel-edit-btn').classList.remove('hidden');
+        }
+
+        function resetMenuForm() {
+            document.getElementById('admin-item-id').value = '';
+            document.getElementById('admin-item-name').value = '';
+            document.getElementById('admin-item-price').value = '';
+            document.getElementById('admin-item-tag').value = '';
+            document.getElementById('admin-item-image').value = '';
+            document.getElementById('admin-item-desc').value = '';
+            document.getElementById('menu-form-title').innerHTML = '<i class="fa-solid fa-plus"></i> Add New Menu Item';
+            document.getElementById('cancel-edit-btn').classList.add('hidden');
+        }
+
+        function deleteMenuItem(id) {
+            if (!isAdminLoggedIn) return;
+            if (confirm('Are you sure you want to delete this menu item?')) {
+                menuItems = menuItems.filter(i => i.id !== id);
+                saveMenuToStorage();
+                showNotification('Item deleted from menu!');
+            }
+        }
+
+        /* ==========================================================================
+           CART STATE MANAGEMENT
+           ========================================================================== */
+        let cart = JSON.parse(localStorage.getItem('mlangeni_cart')) || [];
+
+        function saveCart() {
+            localStorage.setItem('mlangeni_cart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function addToCart(itemId) {
+            const item = menuItems.find(i => i.id === itemId);
+            const existing = cart.find(c => c.id === itemId);
+
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...item, quantity: 1 });
+            }
+
+            saveCart();
+            showNotification(`Added ${item.name} to basket!`);
+        }
+
+        function updateQuantity(itemId, delta) {
+            const index = cart.findIndex(c => c.id === itemId);
+            if (index !== -1) {
+                cart[index].quantity += delta;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            saveCart();
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge');
+            const totalCount = cart.reduce((sum, i) => sum + i.quantity, 0);
+            
+            badge.innerText = totalCount;
+            if (totalCount > 0) {
+                badge.classList.remove('scale-0');
+            } else {
+                badge.classList.add('scale-0');
+            }
+
+            const container = document.getElementById('cart-items-container');
+            const totalPriceEl = document.getElementById('cart-total-price');
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-gray-500 space-y-3">
+                        <i class="fa-solid fa-basket-shopping text-4xl text-gray-600"></i>
+                        <p class="text-sm">Your basket is currently empty.</p>
+                        <button onclick="toggleCart()" class="text-xs text-brand-orange font-bold hover:underline">Explore Menu & Add Food</button>
+                    </div>
+                `;
+                totalPriceEl.innerText = 'R 0.00';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                html += `
+                    <div class="flex items-center justify-between bg-brand-accent p-3 rounded-xl border border-gray-800">
+                        <div class="flex items-center gap-3">
+                            <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-xs font-bold text-white line-clamp-1">${item.name}</h4>
+                                <p class="text-xs text-brand-orange font-extrabold mt-0.5">R ${item.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateQuantity('${item.id}', -1)" class="w-6 h-6 bg-brand-card hover:bg-gray-700 text-gray-300 rounded flex items-center justify-center font-bold text-xs">-</button>
+                            <span class="text-xs font-bold text-white w-4 text-center">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', 1)" class="w-6 h-6 bg-brand-card hover:bg-gray-700 text-gray-300 rounded flex items-center justify-center font-bold text-xs">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            totalPriceEl.innerText = `R ${total.toFixed(2)}`;
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function toggleDeliveryAddress() {
+            const orderType = document.querySelector('input[name="orderType"]:checked').value;
+            const addressField = document.getElementById('delivery-address-field');
+            if (orderType === 'Delivery') {
+                addressField.classList.remove('hidden');
+            } else {
+                addressField.classList.add('hidden');
+            }
+        }
+
+        /* ==========================================================================
+           WHATSAPP ORDER GENERATOR
+           ========================================================================== */
+        function sendWhatsAppOrder() {
+            if (cart.length === 0) {
+                alert('Your basket is empty. Add items before placing an order.');
+                return;
+            }
+
+            const orderType = document.querySelector('input[name="orderType"]:checked').value;
+            const address = document.getElementById('cust-address').value.trim();
+            const notes = document.getElementById('cust-notes').value.trim();
+
+            if (orderType === 'Delivery' && !address) {
+                alert('Please enter your delivery address in Hlalanikahle.');
+                return;
+            }
+
+            let message = `*NEW ORDER - MLANGENI LIFESTYLE*\n`;
+            message += `---------------------------------\n`;
+            message += `*Type:* ${orderType}\n`;
+            if (orderType === 'Delivery') {
+                message += `*Address:* ${address}\n`;
+            }
+            if (notes) {
+                message += `*Notes:* ${notes}\n`;
+            }
+            message += `---------------------------------\n`;
+            message += `*ORDER ITEMS:*\n`;
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                message += `${index + 1}. ${item.name} x${item.quantity} - R${itemTotal.toFixed(2)}\n`;
+            });
+
+            message += `---------------------------------\n`;
+            message += `*TOTAL AMOUNT: R${total.toFixed(2)}*\n\n`;
+            message += `Please confirm availability and estimated preparation time! Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const phone = storeConfig.phone || "27720000000"; 
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+        }
+
+        /* ==========================================================================
+           MENU RENDER & FILTERING
+           ========================================================================== */
+        function renderMenu(items) {
+            const grid = document.getElementById('menu-grid');
+            grid.innerHTML = items.map(item => `
+                <div class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                                ${item.tag}
+                            </span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex items-start justify-between gap-2">
+                                <h3 class="text-base font-extrabold text-white group-hover:text-brand-orange transition">${item.name}</h3>
+                                <span class="text-base font-black text-brand-amber whitespace-nowrap">R ${item.price}</span>
+                            </div>
+                            <p class="text-xs text-gray-400 leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="orderDirectWhatsApp('${item.id}')" class="w-full bg-brand-whatsapp hover:bg-emerald-600 text-white py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Order
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        /* Direct Item WhatsApp Order */
+        function orderDirectWhatsApp(itemId) {
+            const item = menuItems.find(i => i.id === itemId);
+            if (!item) return;
+
+            let message = `*NEW ORDER - MLANGENI LIFESTYLE*\n`;
+            message += `---------------------------------\n`;
+            message += `Hello! I would like to order:\n\n`;
+            message += `*Item:* ${item.name}\n`;
+            message += `*Price:* R${item.price.toFixed(2)}\n`;
+            message += `---------------------------------\n`;
+            message += `Please let me know how long it will take to prepare!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const phone = storeConfig.phone || "27720000000"; 
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+        }
+
+        function filterCategory(category) {
+            // Update active state of buttons
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-orange', 'border-brand-orange', 'text-white');
+                btn.classList.add('border-gray-700', 'bg-brand-card', 'text-gray-300');
+            });
+            event.currentTarget.classList.remove('border-gray-700', 'bg-brand-card', 'text-gray-300');
+            event.currentTarget.classList.add('bg-brand-orange', 'border-brand-orange', 'text-white');
+
+            if (category === 'all') {
+                renderMenu(menuItems);
+            } else {
+                const filtered = menuItems.filter(i => i.category === category);
+                renderMenu(filtered);
+            }
+        }
+
+        /* ==========================================================================
+           AUTOMATED CHAT BOT SYSTEM
+           ========================================================================== */
+        function toggleChat() {
+            const chatWin = document.getElementById('chat-window');
+            const openIcon = document.getElementById('chat-icon-open');
+            const closeIcon = document.getElementById('chat-icon-close');
+            
+            chatWin.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        function handleChatKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            input.value = '';
+
+            setTimeout(() => {
+                generateBotResponse(text.toLowerCase());
+            }, 600);
+        }
+
+        function askQuickQuestion(type) {
+            let userText = '';
+            if (type === 'location') userText = "Where are you located exactly?";
+            if (type === 'hours') userText = "What are your opening hours?";
+            if (type === 'kotas') userText = "What are your best Kotas?";
+            if (type === 'delivery') userText = "Do you deliver in Hlalanikahle?";
+
+            appendUserMessage(userText);
+            setTimeout(() => {
+                generateBotResponse(type);
+            }, 500);
+        }
+
+        function appendUserMessage(msg) {
+            const chatBox = document.getElementById('chat-messages');
+            const userHtml = `
+                <div class="flex gap-2 items-start justify-end">
+                    <div class="bg-brand-orange text-white p-3 rounded-2xl rounded-tr-none max-w-[80%] text-xs font-medium">
+                        ${msg}
+                    </div>
+                </div>
+            `;
+            chatBox.innerHTML += userHtml;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function appendBotMessage(msg) {
+            const chatBox = document.getElementById('chat-messages');
+            const botHtml = `
+                <div class="flex gap-2 items-start">
+                    <div class="w-7 h-7 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center text-xs shrink-0 mt-1">
+                        🤖
+                    </div>
+                    <div class="bg-brand-accent p-3 rounded-2xl rounded-tl-none max-w-[80%] text-gray-200">
+                        ${msg}
+                    </div>
+                </div>
+            `;
+            chatBox.innerHTML += botHtml;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function generateBotResponse(input) {
+            let reply = "";
+
+            if (input === 'location' || input.includes('where') || input.includes('location') || input.includes('address')) {
+                reply = "📍 <b>Mlangeni Lifestyle</b> is located in <b>Witbank, Hlalanikahle Ext 3</b>, right next to the <b>Taxi Rank & Community Hall</b>. Drop by for hot fresh food!";
+            } else if (input === 'hours' || input.includes('time') || input.includes('open') || input.includes('hours')) {
+                reply = "🕒 We are open <b>7 days a week</b> from <b>09:00 AM to 09:00 PM</b>.";
+            } else if (input === 'kotas' || input.includes('kota') || input.includes('best') || input.includes('recommend')) {
+                reply = "🍞 Our top sellers are the <b>Mlangeni Special Kota (R75)</b> loaded with steak strips, Russian & cheese, and the classic <b>Deluxe Club Kota (R55)</b>!";
+            } else if (input === 'delivery' || input.includes('deliver') || input.includes('bring')) {
+                reply = "🚚 Yes! We offer fast delivery around Witbank, Hlalanikahle Ext 3 & nearby sections. Simply select 'Delivery' when submitting your WhatsApp basket!";
+            } else if (input.includes('rib') || input.includes('wings') || input.includes('burger')) {
+                reply = "🍖 Try our <b>Sticky BBQ Ribs (400g / 800g)</b> or our <b>Double Stacked Beef Burger</b>. All grilled to perfection!";
+            } else {
+                reply = "Thanks for contacting Mlangeni Lifestyle! You can explore our full menu on this page, add items to your basket, and click 'Send Order via WhatsApp' to chat directly with our chef!";
+            }
+
+            appendBotMessage(reply);
+        }
+
+        /* Toast Notifications */
+        function showNotification(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-2xl z-50 transition-all duration-300 transform translate-y-4 opacity-0';
+            toast.innerText = msg;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-4', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-4', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+
+        /* ==========================================================================
+           INITIALIZATION
+           ========================================================================== */
+        window.onload = function() {
+            renderMenu(menuItems);
+            updateCartUI();
+        };
+    </script>
+</body>
+</html>
